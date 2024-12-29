@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Dunkler Hintergrund */
+    color: white; /* Helle Schriftfarbe */
+    perspective: 1000px; /* Perspektive für 3D-Effekt */
+}
+
+.chat-container {
+    width: 400px;
+    background-color: #333; /* Dunklerer Hintergrund für das Chat-Fenster */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7); /* 3D-Schatten */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: rotateX(10deg); /* Leichte Neigung für den 3D-Effekt */
+    transition: transform 0.3s ease;
+}
+
+.chat-container:hover {
+    transform: rotateX(0deg); /* Hebt die Neigung beim Hover auf */
+}
+
+.chat-header {
+    background-color: #444; /* Dunkler Header */
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* 3D-Effekt im Header */
+    transform: translateZ(20px); /* Header nach vorne verschieben */
+}
+
+.chat-box {
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 3D-Effekt für Nachrichten */
+    transition: transform 0.2s ease;
+}
+
+.chat-message:hover {
+    transform: scale(1.05); /* Leicht vergrößern beim Hover */
+}
+
+.bot-message {
+    background-color: #555; /* Dunkelgraue Farbe für die Bot-Nachricht */
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* 3D-Schatten für das Benutzerbild */
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.timestamp {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+.chat-input {
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #444; /* Dunklere Trennlinie */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #222; /* Dunkler Hintergrund für die Eingabezeile */
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* 3D-Effekt im Eingabebereich */
+}
+
+.send-button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 3D-Schatten für die Schaltfläche */
+    transform: translateZ(10px); /* Schaltfläche nach vorne verschieben */
+    transition: transform 0.2s ease;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+    transform: translateZ(15px); /* Schaltfläche bei Hover weiter nach vorne verschieben */
+}
